@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Your Food</title>
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>ORDER <span>YOUR</span> FOOD</h1>
+    </header>
+    <main>
+      <div class="left-panel">
+        <div class="video-container">
+          <video id="video" autoplay muted playsinline></video>
+          <canvas id="overlay"></canvas>
+          <div id="countBadge">Fingers: 0</div>
+        </div>
+        <div class="control-panel">
+          <img src="{{ url_for('static', filename='burger.png') }}" alt="Burger" class="burger-icon">
+          <div id="slider"></div>
+        </div>
+      </div>
+      <div class="right-panel">
+        <h2>MENU</h2>
+        <div class="menu-grid">
+          <div class="menu-item" data-index="1">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Phở bò</h3>
+            <p>60,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="2">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Bún chả</h3>
+            <p>55,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="3">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Bún bò</h3>
+            <p>100,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="4">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Cơm tấm</h3>
+            <p>80,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="5">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Bún đậu mắm tôm</h3>
+            <p>90,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="6">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Burger</h3>
+            <p>60,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="7">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Gà Rán</h3>
+            <p>167,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="8">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Sườn Nướng</h3>
+            <p>199,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="9">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Canh Kim Chi</h3>
+            <p>88,000₫</p>
+            <div class="select-progress"></div>
+          </div>
+          <div class="menu-item" data-index="10">
+            <img src="https://via.placeholder.com/150" alt="Dish">
+            <h3>Hủ Tiếu</h3>
+            <p>35,000₫</p>
+            <div class="select-progress"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+

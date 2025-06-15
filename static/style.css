@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f3ee;
+    color: #333;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header h1 span {
+    color: #c42f1e;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #000;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#countBadge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.control-panel {
+    display: flex;
+    align-items: center;
+    background: #e1cdc2;
+    padding: 10px;
+    gap: 15px;
+}
+
+.burger-icon {
+    width: 50px;
+    height: 50px;
+}
+
+#slider {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.right-panel {
+    flex: 1.2;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-panel h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.menu-item {
+    position: relative;
+    background: #faf5ef;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.menu-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.select-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #c42f1e;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.menu-item.selected {
+    border-color: #c42f1e;
+    box-shadow: 0 0 6px rgba(196, 47, 30, 0.6);
+}
